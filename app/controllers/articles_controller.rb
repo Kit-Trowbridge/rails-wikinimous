@@ -17,6 +17,17 @@ class ArticlesController < ApplicationController
     redirect_to article_path
   end
 
+  def new
+    @article = Article.new
+  end
+
+  def create
+    @article = Article.new(article_params)
+    # how do I upcase the article's name before saving?
+    @article.save
+    redirect_to articles_path
+  end
+
   private
 
   def article_params
