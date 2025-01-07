@@ -4,8 +4,9 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :content %>
-  <%# want to show html info here not content %>
-  <%= f.text_area :content %>
+  <%= f.text_area :content, data_editor: 'markdown' %>
+  <%# want to show html info here not content, added data-editor="markdown" like this ^ %>
+  <%# still not working though... tags show up in content once saved %>
   <%= f.submit %>
 <% end %>
 
